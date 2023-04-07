@@ -1,32 +1,34 @@
-/* Theming */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"); /* import font */
-
-a{
+a {
     text-decoration: none;
 }
+
 ul {
     list-style: none
 }
+
 /* Header */
-.header{
+.header {
     background-color: white;
     color: #073059;
     position: sticky;
     top: 0;
     width: 100%;
 }
+
 /* Logo */
-.text-header{
+.text-header {
     height: 15%;
 }
-.text-header h1{
+
+.text-header h1 {
     display: inline-block;
     color: #073059;
     font-size: 2rem;
     padding: 20px 25px;
 }
+
 /* Nav menu */
-.nav{
+.nav {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -34,46 +36,55 @@ ul {
     overflow: hidden;
 
 }
-.menu{
+
+.menu {
     padding-bottom: 200px;
 }
-.menu a{
+
+.menu a {
     display: block;
     color: rgb(65, 87, 109);
     padding: 14px 16px;
     text-decoration: none;
     text-align: center;
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     cursor: pointer;
 }
-.menu h1{
+
+.menu h1 {
     display: none;
 }
+
 /*style-work*/
-.style-font a{
-    font-size: 1.7rem;
+.style-font a {
+    font-size: 1.8rem;
     margin-top: 20px;
     font-weight: bold;
     padding-top: 20px;
     color: rgb(1, 43, 85);
 }
+
 /*contact*/
-.style-font2 li a{
-    font-size: 1.7rem;
+.style-font2 li a {
+    font-size: 1.8rem;
     font-weight: bold;
     padding-top: 15px;
     color: rgb(1, 43, 85);
 }
-.nav{
+
+.nav {
     max-height: 0;
     transition: max-height .5s ease-out;
 }
+
 /* Menu Icon */
-.hamb{
+.hamb {
     cursor: pointer;
     float: right;
     padding: 40px 20px;
-}/* Style label tag */
+}
+
+/* Style label tag */
 
 .hamb-line {
     background: black;
@@ -82,10 +93,12 @@ ul {
     position: relative;
     width: 24px;
 
-} /* Style span tag */
+}
+
+/* Style span tag */
 
 .hamb-line::before,
-.hamb-line::after{
+.hamb-line::after {
     background: black;
     content: '';
     display: block;
@@ -94,25 +107,47 @@ ul {
     transition: all .2s ease-out;
     width: 100%;
 }
-.hamb-line::before{
+
+.hamb-line::before {
     top: 5px;
 }
-.hamb-line::after{
+
+.hamb-line::after {
     top: -5px;
 }
+
 .side-menu {
     display: none;
-} /* Hide checkbox */
+}
+
+/* Hide checkbox */
 /* Toggle menu icon */
-.side-menu:checked ~ nav{
+.side-menu:checked ~ nav {
     max-height: 100%;
     overflow: scroll;
     text-align: center;
 }
-.side-menu:checked ~ .text-header h1{
-    display: none;
+
+.side-menu:checked ~ .responsive {
+    content-visibility: hidden;
 }
-.side-menu:checked ~ nav .social-media{
+
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+/*fixed menu*/
+.side-menu:checked ~ nav .social-media {
     text-align: center;
     width: 100%;
     background-color: #fff;
@@ -120,142 +155,103 @@ ul {
     bottom: 0;
     left: 0;
     margin: 0;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
     position: fixed;
 }
-.social-media img{
+
+.social-media img {
     height: 55px;
-    padding: 2px;
+    padding: 12px;
 }
+
 .social-media > li {
     display: inline-block;
 }
 
-.side-menu:checked ~ .img-hover{
-position: unset;
-}
-.side-menu:checked ~ .responsive{
-    content-visibility:hidden;
-}
+/* Responsiveness tablet */
 
-.side-menu:checked ~ .hamb .hamb-line {
-    background: transparent;
-}
-.side-menu:checked ~ .hamb .hamb-line::before {
-    transform: rotate(-45deg);
-    top:0;
-}
-.side-menu:checked ~ .hamb .hamb-line::after {
-    transform: rotate(45deg);
-    top:0;
-}
 @media (min-width: 600px) {
-    .header-responsive{display: flex}
-.header{
-    position: unset;
-}
-.nav{
-    width: 40%;
-}
-.nav{
-    width: 35%;
-    max-height: none;
-    top: 0;
-    position: relative;
-    float: right;
-}
-.text-header{
-    display: none;
-}
-.menu li{
-    float: left;
-}
-.menu a{
-    font-size: 1.7rem;
-    text-align: left;
-    padding: 12px 28px;
-}
-.menu h1{
-    display: flex;
-    color: #012B55;
-    font-size: 2rem;
-    padding-top: 80px;
-}
-.hamb {
-    display: none;
-    margin-top: 20px;
-}
-.tittle-rose{
-    margin-bottom: 30px;
-}
-
-.social-media img{
-    height: 30px;
-}
-.social-media{
-    width: 143px;
-    position: unset;
-    border: none;
-    padding-left: 25px;
-}
-
-}
-/* Responsiveness desktop */
-@media (min-width: 900px) {
-    .header-responsive{display: flex}
-    .header{
-        position: unset;
+    .header-responsive {
+        display: flex
     }
-    .nav{
-        width: 35%;
+
+    .nav {
+        width: 40%;
         max-height: none;
         top: 0;
         position: relative;
         float: right;
-        background-color: transparent;
     }
-    .header{
-        position: unset;
-    }
-    .nav{
-        width: 35%;
-        max-height: none;
-        top: 0;
-        position: relative;
-        float: right;
-        background-color: transparent;
-    }
-    .text-header{
+
+    .text-header {
         display: none;
     }
-    .menu li{
+
+    .menu li {
         float: left;
     }
-    .menu a{
-        font-size: 1.7rem;
+
+    .menu a {
+        font-size: 1.4rem;
         text-align: left;
-        padding: 5px 70px;
+        padding: 12px 28px;
     }
-    .menu h1{
+
+    .style-font a {
+        font-size: 1.5rem;
+    }
+
+    .style-font2 li > a {
+        font-size: 1.5rem;
+    }
+
+    .menu h1 {
         display: flex;
         color: #012B55;
         font-size: 2rem;
         padding-top: 80px;
     }
+
     .hamb {
         display: none;
         margin-top: 20px;
     }
-    .tittle-rose{
+
+    .tittle-rose {
         margin-bottom: 30px;
     }
 
-    .social-media img{
+    .social-media img {
+        height: 30px;
+        padding: 2px;
+    }
+
+    .social-media {
+        width: 135px;
+        position: unset;
+        border: none;
+        padding-left: 25px;
+    }
+
+}
+
+/* Responsiveness desktop */
+@media (min-width: 900px) {
+    .nav {
+        width: 30%;
+    }
+
+    .menu a {
+        font-size: 1.4rem;
+        text-align: left;
+        padding: 5px 70px;
+    }
+
+    .social-media img {
         height: 30px;
     }
-    .social-media{
+
+    .social-media {
         width: 200px;
         position: unset;
         border: none;
